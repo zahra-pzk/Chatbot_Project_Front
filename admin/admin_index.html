@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-section">
+        <div class="login-box">
+            <h2>Admin Portal</h2>
+            <input type="text" id="admin-username" placeholder="Username">
+            <input type="password" id="admin-password" placeholder="Password">
+            <button id="admin-login-btn">Login</button>
+        </div>
+    </div>
+
+    <div id="dashboard-section" class="hidden">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Active Chats</h3>
+                <button id="refresh-chats">↻</button>
+            </div>
+            <ul id="chat-list"></ul>
+            <button id="admin-logout">Logout</button>
+        </div>
+        <div class="chat-area">
+            <div id="empty-state">Select a chat to start messaging</div>
+            <div id="chat-interface" class="hidden">
+                <div class="chat-top-bar">
+                    <span id="current-chat-id">Chat ID: ...</span>
+                    <span id="current-chat-status">Status: ...</span>
+                </div>
+                
+                <div id="admin-messages"></div>
+
+                <div id="ai-suggestion-box" class="hidden">
+                    <div class="ai-header">
+                        <span>🤖 AI Suggestion</span>
+                        <span id="ai-action-badge" class="badge"></span>
+                    </div>
+                    <p id="ai-suggestion-text"></p>
+                    <div class="ai-buttons">
+                        <button id="btn-use-ai">Use Reply</button>
+                        <button id="btn-dismiss-ai">Dismiss</button>
+                    </div>
+                </div>
+
+                <div class="admin-input">
+                    <input type="text" id="admin-input-field" placeholder="Type a reply...">
+                    <button id="admin-send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
